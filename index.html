@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Weather Forcasting</title>
+</head>
+
+<body>
+    <nav id="NaVbar" class="navbar  navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand"><span id="d1">City Name</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav m-auto do1">
+                    <a class="nav-link" aria-current="page" href="#current">Current</a>
+                    <a class="nav-link" href="#day2"><span id="d2">Day 2</span></a>
+                    <a class="nav-link" href="#day3"><span id="d3">Day 3</span></a>
+                    <a class="nav-link" href="#day4"><span id="d4">Day 4</span></a>
+                    <a class="nav-link" href="#day5"><span id="d5">Day 5</span></a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav class="bg">
+        <div class="container-fluid">
+            <form class="d-flex do2">
+                <input class="do3 form-control me-2" style="max-width: 500px;" id="input" type="search"
+                    placeholder="City Name" aria-label="Search">
+                <button class="btn btn-dark" type="search" id="search_button" onclick="GetInfo()">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <section id="a1">
+        <div id="current">
+            <h1 id="d12">City Name</h1>
+            <h2 class="h2">Current Weather</h2>
+            <div class="mb-3 bg-1" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="./clear.png" id="image_00" class="img1 img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+
+                            <p class="card-text">
+                            <p class="card-text"><span>Temperature : </span><span
+                                    id="temp_00">----</span><span>&#176c</span>
+                            </p>
+                            <p class="card-text"><span>Climate : </span><span id="climate_00">----</span></p>
+                            <p class="card-text"><span>Humidity : </span><span id="humidity_00">----</span>%</p>
+                            <p class="card-text"><span>Wind Speed : </span><span id="wind_00">----</span>km/hr</p>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="day2">
+            <h2 id="a2">day</h2>
+            <h2 id="d02">Date 2</h2>
+            <div class="cont">
+                <div class="row g-3">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_01" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">12:00 am</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_01">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_01">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_02" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">03:00 am</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_02">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_02">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_03" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">06:00 am</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_03">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_03">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_04" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">09:00 am</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_04">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_04">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_05" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">12:00 pm</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_05">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_05">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_06" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">03:00 pm</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_06">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_06">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_07" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">06:00 pm</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_07">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_07">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_08" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">09:00 pm</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_08">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_08">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="day3">
+            <h2 id="a3">day</h2>
+            <h2 id="d03">Date 3</h2>
+            <div class="cont">
+                <div class="row g-3">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_11" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">12:00 am</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_11">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_11">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_12" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">03:00 am</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_12">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_12">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_13" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">06:00 am</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_13">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_13">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_14" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">09:00 am</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_14">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_14">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_15" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">12:00 pm</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_15">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_15">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_16" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">03:00 pm</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_16">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_16">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_17" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">06:00 pm</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_17">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_17">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_18" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">09:00 pm</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_18">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_18">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="day4">
+            <h2 id="a4">day</h2>
+            <h2 id="d04">Date 4</h2>
+            <div class="cont">
+                <div class="row g-3">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_21" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">12:00 am</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_21">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_21">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_22" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">03:00 am</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_22">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_22">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_23" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">06:00 am</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_23">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_23">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_24" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">09:00 am</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_24">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_24">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_25" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">12:00 pm</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_25">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_25">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_26" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">03:00 pm</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_26">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_26">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_27" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">06:00 pm</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_27">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_27">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_28" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">09:00 pm</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_28">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_28">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="day5">
+            <h2 id="a5">day</h2>
+            <h2 id="d05">Date 5</h2>
+            <div class="cont">
+                <div class="row g-3">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_31" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">12:00 am</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_31">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_31">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_32" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">03:00 am</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_32">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_32">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_33" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">06:00 am</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_33">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_33">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_34" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">09:00 am</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_34">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_34">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_35" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">12:00 pm</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_35">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_35">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_36" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">03:00 pm</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_36">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_36">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_37" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">06:00 pm</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_37">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_37">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="bg-1" style="width: 18rem;">
+                            <img src="./clear.png" id="image_38" class="img img1" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">09:00 pm</p>
+                                <p class="card-text"><span>Temperature : </span><span
+                                        id="temp_38">----</span><span>&#176c</span>
+                                </p>
+                                <p class="card-text"><span>Climate : </span><span id="climate_38">----</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

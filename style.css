@@ -1,0 +1,72 @@
+
+.do1{
+    font-size: larger;
+}
+.do2{
+    justify-content: center;
+    padding-top: 10%;
+    padding-left: auto;
+    padding-right: auto;
+    padding-bottom: 10%;
+}
+.do3{
+    text-align: center;
+}
+#current{
+    justify-content: center;
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+}
+
+.img{
+    padding-left: 20px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    
+}
+.current h1{
+    padding-bottom: 120px;
+}
+#d12{
+    font-weight: bold;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    color: white;
+}
+.img1{
+    height: 200px;
+    width: 200px;
+    
+}
+#day2,#day3,#day4,#day5{
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+}
+.cont{
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 40px;
+}
+.bg{
+    background:url("./v8NUrFg-nasa-space-wallpaper.jpg") ;
+
+}
+.bg-1{
+    background-color: rgb(85, 162, 225);
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+}
+#a1{
+    background-color: rgb(80, 80, 80);
+    
+}
+h2{
+    color: white;
+}
