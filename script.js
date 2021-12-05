@@ -51,12 +51,17 @@ var nav =document.querySelector('#NaVbar');
 
             window.addEventListener('scroll',function(){
                 if (window.pageYOffset>30) {
+
                     nav.classList.add('fixed-top');
                 }else{
+                    
                     nav.classList.remove('fixed-top');
                 }
             });
+let myNav = document.querySelector('#NaVbar');
 
+
+window.onscroll = function () { moveTop() };
 
 
 function GetInfo() {
